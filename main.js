@@ -1,6 +1,36 @@
-function Consultorio(nombre, paciente){
-    this.nombre = nombre;
-    this.paciente = paciente;
+function Consultorio(nombreConsultorio, nombrePaciente){
+    var _nombreConsultorio = 'Consultorio';
+    var _nombrePaciente = []; 
+
+
+     //Getter nombre
+    Object.defineProperty(this, '_getNombreConsultorio', {
+        get: function(){
+            return _nombreConsultorio;
+        }
+    });
+
+    //Setter nombre
+    Object.defineProperty(this, '_setNombreConsultorio', {
+        set: function(nombre){
+          
+        }
+    }); 
+
+    //Getter nombres pacientes
+    Object.defineProperty(this, '_getNombrePaciente', {
+        get: function(){
+            return _nombrePaciente;
+        }
+    });
+
+    //Setter pacientes
+    Object.defineProperty(this, '_setNombrePaciente', {
+        set: function(nombre, edad, rut, diagnostico){
+            this._nombrePacientes.push(new Paciente(nombre, edad, rut, diagnostico))
+        }
+    });
+
 
     }
 
@@ -81,6 +111,7 @@ Paciente.prototype.mostrar = function(){
 
 var pacienteUno = new Paciente('Anasu', '34', '12345679-8', 'loquilla');
 var pacienteDos = new Paciente('Tam', '41', '90234567-8', 'enojona'); 
-    
+ 
+
 
     
