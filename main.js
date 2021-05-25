@@ -36,7 +36,7 @@ function Consultorio(consultorio, paciente){  // si hay algun estatico no necesi
     }
  // metodos del consultorio
     Consultorio.prototype.getConsultorio = function(){
-        return `${this._getConsultorio}`;
+        return this._getConsultorio;
     }
 
     Consultorio.prototype.setConsultorio = function(consultorio){
@@ -44,7 +44,7 @@ function Consultorio(consultorio, paciente){  // si hay algun estatico no necesi
     }
 
     Consultorio.prototype.getPaciente = function(){
-        return `${this._getPaciente}`;
+        return this._getPaciente;
     }
 
     Consultorio.prototype.setPaciente = function(paciente){
@@ -120,7 +120,7 @@ function Paciente(nombre, edad, rut, diagnostico){
 // metodos de pacientes
 
 Paciente.prototype.getNombre = function(){
-    return `${this._getNombre}`;
+    return this._getNombre;
 }
 
 Paciente.prototype.setNombre = function(nombre){
@@ -128,7 +128,7 @@ Paciente.prototype.setNombre = function(nombre){
 }
 
 Paciente.prototype.getEdad = function(){
-    return `${this._getEdad}`;
+    return this._getEdad;
 }
 
 Paciente.prototype.setEdad = function(edad){
@@ -136,7 +136,7 @@ Paciente.prototype.setEdad = function(edad){
 }
 
 Paciente.prototype.getRut = function(){
-    return `${this._getRut}`;
+    return this._getRut;
 }
 
 Paciente.prototype.setRut = function(rut){
@@ -144,7 +144,7 @@ Paciente.prototype.setRut = function(rut){
 }
 
 Paciente.prototype.getDiagnostico = function(){
-    return `${this._getDiagnostico}`;
+    return this._getDiagnostico;
 }
 
 Paciente.prototype.setDiagnostico = function(diagnostico){
@@ -172,3 +172,5 @@ var pacienteDos = new Paciente('Tam', '41', '90234567-8', 'enojona');
 var consultorioUno = new Consultorio('consultorio', pacienteUno);
 console.log(consultorioUno);
 console.log(consultorioUno.getPaciente().getNombre());    
+
+
